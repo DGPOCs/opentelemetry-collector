@@ -16,6 +16,7 @@ require (
 	go.opentelemetry.io/collector/connector/forwardconnector v0.139.0
 	go.opentelemetry.io/collector/exporter v1.45.0
 	go.opentelemetry.io/collector/exporter/debugexporter v0.139.0
+	go.opentelemetry.io/collector/exporter/mongodbexporter v0.139.0
 	go.opentelemetry.io/collector/exporter/nopexporter v0.139.0
 	go.opentelemetry.io/collector/exporter/otlpexporter v0.139.0
 	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.139.0
@@ -64,6 +65,7 @@ require (
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.3-0.20250322232337-35a7c28c31ee // indirect
+	github.com/montanaflynn/stats v0.7.1 // indirect
 	github.com/mostynb/go-grpc-compression v1.2.3 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/pierrec/lz4/v4 v4.1.22 // indirect
@@ -81,7 +83,12 @@ require (
 	github.com/stretchr/testify v1.11.1 // indirect
 	github.com/tklauser/go-sysconf v0.3.15 // indirect
 	github.com/tklauser/numcpus v0.10.0 // indirect
+	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
+	github.com/xdg-go/scram v1.1.2 // indirect
+	github.com/xdg-go/stringprep v1.0.4 // indirect
+	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
+	go.mongodb.org/mongo-driver v1.17.6 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
 	go.opentelemetry.io/collector v0.139.0 // indirect
 	go.opentelemetry.io/collector/client v1.45.0 // indirect
@@ -166,6 +173,7 @@ require (
 	golang.org/x/crypto v0.42.0 // indirect
 	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 // indirect
 	golang.org/x/net v0.44.0 // indirect
+	golang.org/x/sync v0.17.0 // indirect
 	golang.org/x/text v0.29.0 // indirect
 	gonum.org/v1/gonum v0.16.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250825161204-c5933d9347a5 // indirect
@@ -242,6 +250,8 @@ replace go.opentelemetry.io/collector/connector/forwardconnector => ../../connec
 replace go.opentelemetry.io/collector/exporter => ../../exporter
 
 replace go.opentelemetry.io/collector/exporter/debugexporter => ../../exporter/debugexporter
+
+replace go.opentelemetry.io/collector/exporter/mongodbexporter => ../../exporter/mongodbexporter
 
 replace go.opentelemetry.io/collector/exporter/exportertest => ../../exporter/exportertest
 

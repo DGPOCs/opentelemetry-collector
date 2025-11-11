@@ -1,0 +1,32 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+
+exporters:
+  mongodb:
+    uri: "${env:MONGODB_URI}"
+    username: "${env:MONGODB_USER}"
+    password: "${env:MONGODB_PASS}"
+    database: "${env:MONGODB_DATABASE}"
+    collection: "${env:MONGODB_COLLECTION}"
+    connect_timeout: 15s
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [mongodb]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [mongodb]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [mongodb]
